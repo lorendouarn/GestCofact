@@ -1,4 +1,6 @@
-﻿using Repository;
+﻿using LibModel;
+using Repository;
+using Repository.GestionCache;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,15 +26,19 @@ namespace GestCoFact
 
         protected void Mock()
         {
+            var cache = new InMemoryCache();
+
             ClientRepository lClientRepository = new ClientRepository();
-            lClientRepository.GetClients();
+            cache.GetOrSet("ListeModelClient", () => lClientRepository.GetClients());
 
             FactureRepository lFactureRepository = new FactureRepository();
-            lFactureRepository.GetFactures();
+            cache.GetOrSet("ListeModelFactures", () => lFactureRepository.GetFactures());
 
             CommandeRepository lCommandeRepository = new CommandeRepository();
-            lCommandeRepository.GetCommandes();
+            cache.GetOrSet("ListeModelCommandes", () => lCommandeRepository.GetCommandes());
+            ;
         }
 
     }
+
 }
