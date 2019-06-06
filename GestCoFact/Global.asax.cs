@@ -28,15 +28,21 @@ namespace GestCoFact
         {
             var cache = new InMemoryCache();
 
-            ClientRepository lClientRepository = new ClientRepository();
-            cache.GetOrSet("ListeModelClient", () => lClientRepository.GetClients());
-
+            //Mock et mise en cache facture
             FactureRepository lFactureRepository = new FactureRepository();
-            cache.GetOrSet("ListeModelFactures", () => lFactureRepository.GetFactures());
+            IList<Facture> listeTouteFactures = lFactureRepository.GetFactures();
+            cache.GetOrSet("ListeModelFactures", () => listeTouteFactures);
 
+            //Mock et mise en cache commande
             CommandeRepository lCommandeRepository = new CommandeRepository();
-            cache.GetOrSet("ListeModelCommandes", () => lCommandeRepository.GetCommandes());
-            ;
+            IList<Commande> listeTouteCommandes = lCommandeRepository.GetCommandes();
+            cache.GetOrSet("ListeModelCommandes", () => listeTouteCommandes);
+
+            //Mock et mise en cache client
+            ClientRepository lClientRepository = new ClientRepository();
+            IList<Client> listeTousClients = lClientRepository.GetClients(listeTouteFactures, listeTouteCommandes);
+            cache.GetOrSet("ListeModelClient", () => listeTousClients);
+
         }
 
     }

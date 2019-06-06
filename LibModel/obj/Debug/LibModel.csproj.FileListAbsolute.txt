@@ -1,5 +1,6 @@
 D:\WSCSharp\GestCoFact\LibModel\bin\Debug\LibModel.dll
 D:\WSCSharp\GestCoFact\LibModel\bin\Debug\LibModel.pdb
-D:\WSCSharp\GestCoFact\LibModel\obj\Debug\LibModel.csprojResolveAssemblyReference.cache
 D:\WSCSharp\GestCoFact\LibModel\obj\Debug\LibModel.dll
 D:\WSCSharp\GestCoFact\LibModel\obj\Debug\LibModel.pdb
+D:\WSCSharp\GestCofact\LibModel\obj\Debug\LibModel.csprojAssemblyReference.cache
+D:\WSCSharp\GestCofact\LibModel\obj\Debug\LibModel.csproj.CoreCompileInputs.cache
