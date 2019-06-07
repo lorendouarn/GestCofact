@@ -11,8 +11,9 @@ namespace Repository
     {
         private static readonly int nbClient = 4;
 
-        public IList<Client> GetClients(IList<Facture> listeTouteFactures, IList<Commande> listeTouteCommandes)
+        public IList<Client> GetClients(IList<Facture> listeTouteFactures = null, IList<Commande> listeTouteCommandes = null)
         {
+
             IList<Client> listeModel = new List<Client>();
             for (int i=0; i < nbClient; i++)
             {
