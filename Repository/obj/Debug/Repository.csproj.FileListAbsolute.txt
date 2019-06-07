@@ -4,6 +4,4 @@ D:\WSCSharp\GestCoFact\Repository\obj\Debug\Repository.dll
 D:\WSCSharp\GestCoFact\Repository\obj\Debug\Repository.pdb
 D:\WSCSharp\GestCoFact\Repository\bin\Debug\LibModel.dll
 D:\WSCSharp\GestCoFact\Repository\bin\Debug\LibModel.pdb
-D:\WSCSharp\GestCofact\Repository\obj\Debug\Repository.csprojAssemblyReference.cache
-D:\WSCSharp\GestCofact\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
-D:\WSCSharp\GestCofact\Repository\obj\Debug\Repository.csproj.CopyComplete
+D:\WSCSharp\GestCoFact\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache

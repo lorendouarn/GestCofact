@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+
+@model IEnumerable<LibModel.Client>
+
+
+<table>
+
+    <tr>
+        <td>ID</td>
+        <td>Nom Client</td>
+        <td>Action</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.idClient)</td>
+            <td>@Html.DisplayFor(modelItem => item.nomClient)</td>
+            <td>@Html.ActionLink("Edit", "EditClient", new { id = item.idClient })</td>
+            <td>@Html.ActionLink("Visu", "VisuClient", new { id = item.idClient })</td>
+        </tr>
+
+
+
+
+    }
+
+</table>
+
+
+
+
+

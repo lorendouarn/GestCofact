@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "EditClient";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EditClient</h2>
+
+@model LibModel.Client
+
+
+<div>
+    @using (Html.BeginForm())
+    {
+
+        <div class="form-group">
+            @Html.LabelFor(model => Model.nomClient)
+            <div class="col-md-10">
+                @Html.EditorFor(model => Model.nomClient)
+                @Html.ValidationMessageFor(model => Model.nomClient, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <input type="submit" value="Create" class="btn-default" />
+    }
+</div>
+
+
+
+
