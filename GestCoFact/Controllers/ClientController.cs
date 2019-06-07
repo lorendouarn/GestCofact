@@ -19,7 +19,6 @@ namespace GestCoFact.Controllers
 
             var cache = new InMemoryCache();
             listeModelClients = cache.GetOrSet("ListeModelClient", () => repo.GetClients());
-
         }
 
         public ActionResult Index()
@@ -27,21 +26,18 @@ namespace GestCoFact.Controllers
             return View(listeModelClients);
         }
 
-
-        public ActionResult EditClient([Bind(Include = "Id,NomClient")] Client client)
+        public ActionResult EditClient(int idClient)
         {
-            if (ModelState.IsValid)
-            {
-                var cache = new InMemoryCache();
 
-                cache.SetCache("cacheClient", client);
+            //var cache = new InMemoryCache();
+             //IList<Client> cli =  cache.GetOrSet("ListeModelClient", ()=> repo.GetClients());
 
-                return RedirectToAction("EditClient");
-            }
-            return View();
+            Client monClient= listeModelClients.FirstOrDefault(x => x.idClient == idClient);
+
+            return View(monClient);
         }
 
-        public ActionResult VisuClient([Bind(Include = "Id,NomClient")] Client client)
+        public ActionResult VisuClient([Bind(Include = "idClient,nomClient")] Client client)
         {
             if (ModelState.IsValid)
             {

@@ -70,6 +70,4 @@ D:\WSCSharp\GestCoFact\GestCoFact\bin\Microsoft.Owin.Security.Twitter.xml
 D:\WSCSharp\GestCoFact\GestCoFact\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\WSCSharp\GestCoFact\GestCoFact\obj\Debug\GestCoFact.dll
 D:\WSCSharp\GestCoFact\GestCoFact\obj\Debug\GestCoFact.pdb
-D:\WSCSharp\GestCofact\GestCoFact\obj\Debug\GestCoFact.csprojAssemblyReference.cache
-D:\WSCSharp\GestCofact\GestCoFact\obj\Debug\GestCoFact.csproj.CoreCompileInputs.cache
-D:\WSCSharp\GestCofact\GestCoFact\obj\Debug\GestCoFact.csproj.CopyComplete
+D:\WSCSharp\GestCoFact\GestCoFact\obj\Debug\GestCoFact.csprojResolveAssemblyReference.cache
